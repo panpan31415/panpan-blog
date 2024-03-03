@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react/jsx-runtime";
+import "./App.scss";
+import NavigationArea from "./components/NavigationArea";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="app">
+        <NavigationArea />
+        <main className="main">
+          <div className="children--1">1</div>
+          <div className="children--2">2</div>
+          <div className="children--3">3</div>
+        </main>
+      </div>
+    </Fragment>
   );
 }
 
