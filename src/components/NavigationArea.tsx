@@ -15,9 +15,15 @@ export default function NavigationArea() {
             </p>
           </div>
           <ul className="navigation">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/">About</a>
+            </li>
+            <li>
+              <a href="/">Contact</a>
+            </li>
           </ul>
           <div className="social-media">
             <div>1</div>
