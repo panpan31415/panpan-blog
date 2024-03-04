@@ -30,16 +30,19 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 2.4rem;
-  color: var(--text-white-color);
+
   list-style: none;
   li {
     margin-bottom: 0.8rem;
   }
-  a {
+  &__link {
     text-decoration: none;
     text-transform: capitalize;
     transition: color 0.1s ease-in;
-    &:hover {
+    color: var(--text-white-color);
+    &:hover,
+    &--active {
+      @extend .navigation__link;
       color: var(--secondary-color);
     }
   }

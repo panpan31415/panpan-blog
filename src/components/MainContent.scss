@@ -1,0 +1,30 @@
+.main {
+  width: 75%;
+  margin-left: 25%;
+  min-height: 100vh;
+  position: relative;
+  display: block;
+}
+
+.content-frame {
+  position: fixed;
+  width: inherit;
+  height: 100vh;
+  border: 3rem solid var(--secondary-color);
+}
+
+.children {
+  height: 100vh;
+  &--1 {
+    @extend .children;
+    background-color: bisque;
+  }
+  &--2 {
+    @extend .children;
+    background-color: greenyellow;
+  }
+  &--3 {
+    @extend .children;
+    background-color: darkgray;
+  }
+}

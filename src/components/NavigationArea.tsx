@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import "./NavigationArea.scss";
-import { useComponentWidth } from "../utilities";
+import { useComponentSize } from "../utilities";
+import SmoothScrollLink from "./SmoothScrollLink";
 export default function NavigationArea() {
   const headerRef = useRef(null);
-  const size = useComponentWidth(headerRef);
+  const size = useComponentSize(headerRef);
   return (
     <nav className="header" ref={headerRef}>
       <div className="fixed-area" style={{ width: size.width }}>
@@ -16,13 +17,13 @@ export default function NavigationArea() {
           </div>
           <ul className="navigation">
             <li>
-              <a href="/">Home</a>
+              <SmoothScrollLink to="/1">Home</SmoothScrollLink>
             </li>
             <li>
-              <a href="/">About</a>
+              <SmoothScrollLink to="/2">About</SmoothScrollLink>
             </li>
             <li>
-              <a href="/">Contact</a>
+              <SmoothScrollLink to="/3">Contact</SmoothScrollLink>
             </li>
           </ul>
           <div className="social-media">
