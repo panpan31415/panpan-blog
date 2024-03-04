@@ -5,6 +5,9 @@
   --text-default-color: #757575;
   --text-white-color: #f4f4f4;
 }
+.app-wrapper {
+  background-color: var(--secondary-color);
+}
 .app {
   max-width: 1200px;
   margin: 0 auto;
@@ -16,5 +19,4 @@
   min-height: 100vh;
   position: relative;
   display: block;
-  background-color: var(--secondary-color);
 }
