@@ -17,13 +17,16 @@ export default function NavigationArea() {
           </div>
           <ul className="navigation">
             <li>
-              <SmoothScrollLink to="/1">Home</SmoothScrollLink>
+              <SmoothScrollLink to="/home">Home</SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/2">About</SmoothScrollLink>
+              <SmoothScrollLink to="/about">About</SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/3">Contact</SmoothScrollLink>
+              <SmoothScrollLink to="/resume">Resume</SmoothScrollLink>
+            </li>
+            <li>
+              <SmoothScrollLink to="/contact">Contact</SmoothScrollLink>
             </li>
           </ul>
           <div className="social-media">

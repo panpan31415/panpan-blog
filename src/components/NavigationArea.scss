@@ -40,10 +40,22 @@
     text-transform: capitalize;
     transition: color 0.1s ease-in;
     color: var(--text-white-color);
+    position: relative;
     &:hover,
     &--active {
       @extend .navigation__link;
       color: var(--secondary-color);
+    }
+    &--active {
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: green;
+        border-left: 1px solid var(--highlight-color);
+        width: 1px;
+        left: calc(-3rem - 1px);
+        height: 2rem;
+      }
     }
   }
 }

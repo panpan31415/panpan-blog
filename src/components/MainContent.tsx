@@ -8,15 +8,18 @@ export default function MainContent() {
     <main className="main" ref={ref}>
       <div className="content-frame" style={{ width: size.width }}></div>
 
-      <div className="children--1" id={"1"}>
+      <div className="children--1" id={"home"}>
         1
       </div>
 
-      <div className="children--2" id={"2"}>
+      <div className="children--2" id={"about"}>
         2
       </div>
-      <div className="children--3" id={"3"}>
+      <div className="children--3" id={"resume"}>
         3
+      </div>
+      <div className="children--3" id={"contact"}>
+        4
       </div>
     </main>
   );
