@@ -7,6 +7,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
 
 /* Remove default margin */
@@ -28,6 +31,10 @@ ul[role="list"],
 ol[role="list"] {
   list-style: none;
 }
+/* set default 1rem to 10px*/
+html {
+  font-size: 62.5%;
+}
 
 /* Set core root defaults */
 html:focus-within {
@@ -38,7 +45,6 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  font-size: 62.5%;
 }
 
 /* A elements that don't have a class get default styles */
