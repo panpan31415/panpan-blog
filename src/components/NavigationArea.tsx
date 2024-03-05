@@ -2,6 +2,8 @@ import { useRef } from "react";
 import "./NavigationArea.scss";
 import { useComponentSize } from "../utilities";
 import SmoothScrollLink from "./SmoothScrollLink";
+import { TfiLinkedin, TfiFacebook, TfiGithub } from "react-icons/tfi";
+
 export default function NavigationArea() {
   const headerRef = useRef(null);
   const size = useComponentSize(headerRef);
@@ -29,10 +31,16 @@ export default function NavigationArea() {
               <SmoothScrollLink to="/contact">Contact</SmoothScrollLink>
             </li>
           </ul>
-          <div className="social-media">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+          <div className="social-area">
+            <a href="/" className="social-ink" aria-label="github link">
+              <TfiGithub color="currentColor" size={"20"} />
+            </a>
+            <a href="/" className="social-ink" aria-label="linkedin link">
+              <TfiLinkedin color="currentColor" size={"20"} />
+            </a>
+            <a href="/" className="social-ink" aria-label="facebook link">
+              <TfiFacebook color="currentColor" size={"20"} />
+            </a>
           </div>
         </div>
       </div>

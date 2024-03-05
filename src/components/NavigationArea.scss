@@ -72,3 +72,24 @@
     color: var(--highlight-color);
   }
 }
+.social-area {
+  display: flex;
+
+  background-color: var(--primary-color);
+  color: var(--text-white-color);
+}
+.social-ink {
+  border: 1px solid var(--text-white-color);
+  text-decoration: none;
+  width: 3rem;
+  margin-right: 1rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--text-white-color);
+    color: var(--primary-color);
+  }
+}
