@@ -11,15 +11,38 @@
   height: 100vh;
   border: 3rem solid var(--secondary-color);
   pointer-events: none;
+  z-index: 1;
 }
 
-.section {
+%section {
+  font-family: "Roboto", sans-serif;
   width: 100%;
-  background-color: var(--text-white-color);
+  background-color: var(--section-background-color);
+  padding: 4rem 6rem 0 6rem;
+}
+
+%title {
+  margin-top: 3rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+%divider {
+  width: 3.5rem;
+  border-bottom: 2px solid var(--highlight-color);
+  margin: 4rem 0;
+}
+
+%subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  text-transform: capitalize;
 }
 
 .home-section {
-  @extend .section;
+  @extend %section;
   display: grid;
   grid-template-columns: 4fr 6fr;
   padding: 7rem 6rem 0 6rem; // should cover content-frame border;
@@ -28,7 +51,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    font-family: "Roboto", sans-serif;
     margin: 15rem 0;
   }
   &__hello {
@@ -44,9 +66,8 @@
     line-height: 6rem;
   }
   &__divider {
+    @extend %divider;
     width: 3.5rem;
-    border-bottom: 2px solid var(--highlight-color);
-    margin: 4rem 0;
   }
   &__position {
     color: var(--text-default-color);
@@ -58,10 +79,10 @@
   }
 
   &__links {
-    @extend .section;
+    @extend %section;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-family: "Roboto", sans-serif;
     &--left {
       background-color: var(--highlight-color);
     }
@@ -83,6 +104,55 @@
         color: var(--text-white-color);
       }
     }
+  }
+}
+.about-section {
+  @extend %section;
+  border-bottom: 1px solid var(--border-color);
+  &__title {
+    @extend %title;
+  }
+  &__divider {
+    @extend %divider;
+    width: 2.5rem;
+    margin: 1.6rem 0;
+  }
+  &__subtitle {
+    @extend %subtitle;
+  }
+  &__introduction {
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--text-default-color);
+    margin-top: 3rem;
+  }
+  &__skill-area {
+    margin: 3rem 0 8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+  }
+}
+.resume-section {
+  @extend %section;
+  padding-bottom: 8rem;
+  border-bottom: 1px solid var(--border-color);
+  &__title {
+    @extend %title;
+  }
+  &__divider {
+    @extend %divider;
+    width: 2.5rem;
+    margin: 1.6rem 0;
+  }
+  &__subtitle {
+    @extend %subtitle;
+  }
+  &__history {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
   }
 }
 
