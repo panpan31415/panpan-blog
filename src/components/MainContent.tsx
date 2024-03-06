@@ -218,7 +218,7 @@ export default function MainContent() {
         <div className="portfolio-section__summary">
           <div className="portfolio-summary-item">
             <p className="portfolio-summary-item__number">20+</p>
-            <div className="portfolio-summary-item__text">project completed</div>
+            <div className="portfolio-summary-item__text">projects completed</div>
           </div>
           <div className="portfolio-summary-item">
             <p className="portfolio-summary-item__number">3+</p>
