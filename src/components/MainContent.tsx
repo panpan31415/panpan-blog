@@ -32,7 +32,7 @@ export default function MainContent() {
           DOWNLOAD RESUME
         </a>
         <a className="home-section__links--right" href="/">
-          View Profile
+          View Portfolio
         </a>
       </div>
 
@@ -124,9 +124,112 @@ export default function MainContent() {
         </div>
       </section>
 
-      <div className="children--3" id={"contact"}>
-        4
-      </div>
+      <section className="portfolio-section" id="portfolio">
+        <h2 className="portfolio-section__title">Portfolio</h2>
+        <div className="portfolio-section__divider" />
+        <p className="portfolio-section__subtitle"> Skillful & Experienced</p>
+        <div className="portfolio-section__items">
+          <div className="portfolio-item--motosumo">
+            <a href="https://team.motosumo.com/" className="portfolio-item__link" target="_blank" rel="noreferrer">
+              <img
+                src="https://static1.squarespace.com/static/5f215ab150bec52030447111/t/60cccd0be0529c4c668475fa/1624034571565/ms_logo-vertical-white%401x.png"
+                alt="motosumo team-display application website"
+              />
+              <div className="portfolio-item__cover">
+                <div>
+                  <h4 className="portfolio-item__title">Motosumo</h4>
+                  <h5 className="portfolio-item__subtitle">Team Display App</h5>
+                </div>
+                <span className="portfolio-item__deco-line" />
+              </div>
+            </a>
+          </div>
+          <div className="portfolio-item--webshop">
+            <a
+              href="https://webshop-example.panpan.dk/home"
+              className="portfolio-item__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={require("../assets/webshop.png")} alt="web shop model" style={{ height: "inherit" }} />
+              <div className="portfolio-item__cover">
+                <div>
+                  <h4 className="portfolio-item__title">Web Shop</h4>
+                  <h5 className="portfolio-item__subtitle">React Practice Project</h5>
+                </div>
+                <span className="portfolio-item__deco-line" />
+              </div>
+            </a>
+          </div>
+          <div className="portfolio-item--nexter">
+            <a
+              href="https://panpan31415.github.io/advanced-css-course-gird/"
+              className="portfolio-item__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="https://panpan31415.github.io/advanced-css-course-gird/img/logo.png"
+                alt="nexter project"
+                style={{ width: "80%" }}
+              />
+              <div className="portfolio-item__cover">
+                <div>
+                  <h4 className="portfolio-item__title">Nextor Agent</h4>
+                  <h5 className="portfolio-item__subtitle">A practice project build with CSS grid box</h5>
+                </div>
+                <span className="portfolio-item__deco-line" />
+              </div>
+            </a>
+          </div>
+          <div className="portfolio-item--hotel">
+            <a
+              href="https://panpan31415.github.io/advanced-css-course-flex/"
+              className="portfolio-item__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="https://codingheroes.io/assets/img/logo-light-small.png"
+                alt="coding hero"
+                style={{ width: "80%" }}
+              />
+              <div className="portfolio-item__cover">
+                <div>
+                  <h4 className="portfolio-item__title">HOTEL LAS PALMAS</h4>
+                  <h5 className="portfolio-item__subtitle">A flexbox practice project with Jonas Schmedtmann</h5>
+                </div>
+                <span className="portfolio-item__deco-line" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <a
+            className="portfolio-section__show-more"
+            href="https://github.com/panpan31415?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+          >
+            More on github
+          </a>
+        </div>
+
+        <div className="portfolio-section__summary">
+          <div className="portfolio-summary-item">
+            <p className="portfolio-summary-item__number">20+</p>
+            <div className="portfolio-summary-item__text">project completed</div>
+          </div>
+          <div className="portfolio-summary-item">
+            <p className="portfolio-summary-item__number">3+</p>
+            <div className="portfolio-summary-item__text">years professional experience</div>
+          </div>
+          <div className="portfolio-summary-item">
+            <p className="portfolio-summary-item__number">5+</p>
+            <div className="portfolio-summary-item__text">certifications earned </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

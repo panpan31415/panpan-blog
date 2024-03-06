@@ -177,7 +177,6 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
 .hobby-item {
   background-color: var(--highlight-color);
   color: var(--section-background-color);
@@ -202,19 +201,142 @@
     text-transform: uppercase;
   }
 }
+.portfolio-section {
+  @extend %section;
+  padding-bottom: 8rem;
+  border-bottom: 1px solid var(--border-color);
+  &__title {
+    @extend %title;
+  }
+  &__divider {
+    @extend %divider;
+    width: 2.5rem;
+    margin: 1.6rem 0;
+  }
+  &__subtitle {
+    @extend %subtitle;
+  }
+  &__items {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
 
-.children {
-  height: 100vh;
-  &--1 {
-    @extend .children;
-    background-color: bisque;
+  &__show-more {
+    border: 2px solid var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.5;
+    text-transform: uppercase;
+    padding: 1.2rem 2.4rem;
+    text-align: center;
+    transition: all 0.08s ease-in;
+    &,
+    &:visited,
+    &:active,
+    &:hover {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    &:hover {
+      color: var(--text-white-color);
+      background-color: var(--secondary-color);
+    }
   }
-  &--2 {
-    @extend .children;
-    background-color: greenyellow;
+  &__summary {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  &--3 {
-    @extend .children;
-    background-color: darkgray;
+}
+.portfolio-item {
+  height: 25rem;
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: inherit;
+      object-fit: cover;
+      object-position: bottom;
+    }
+    &:hover {
+      .portfolio-item__cover {
+        transform: translateX(0);
+      }
+    }
+  }
+  &__cover {
+    $cover-color: rgba(#011627, 0.9);
+    position: absolute;
+    inset: 2rem;
+    left: 0;
+    pointer-events: none;
+    background-color: var(--hover-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    padding-left: 2rem;
+    color: var(--text-white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 1.6rem;
+  }
+  &__subtitle {
+    font-size: 1.3rem;
+  }
+  &__deco-line {
+    width: 4rem;
+    height: 1px;
+    background-color: currentColor;
+  }
+  &--motosumo {
+    @extend .portfolio-item;
+    background-color: #10c9c8;
+  }
+  &--webshop {
+    @extend .portfolio-item;
+    background-color: rgb(223, 146, 70);
+  }
+  &--nexter {
+    @extend .portfolio-item;
+    background-color: #101d2c;
+  }
+  &--hotel {
+    background-color: #ba265d;
+  }
+}
+.portfolio-summary-item {
+  background-color: var(--highlight-color);
+  color: var(--section-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  border-right: 0.5px solid var(--border-color);
+  &:last-of-type {
+    border-right: none;
+  }
+  &__number {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 41px;
+  }
+  &__text {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
   }
 }

@@ -28,32 +28,17 @@ export default function NavigationArea() {
               <SmoothScrollLink to="/resume">Resume</SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/contact">Contact</SmoothScrollLink>
+              <SmoothScrollLink to="/portfolio">portfolio</SmoothScrollLink>
             </li>
           </menu>
           <div className="social-area">
-            <a
-              href="/"
-              className="social-ink"
-              aria-label="github link"
-              title="github"
-            >
+            <a href="/" className="social-ink" aria-label="github link" title="github">
               <TfiGithub color="currentColor" size={"20"} />
             </a>
-            <a
-              href="/"
-              className="social-ink"
-              aria-label="linkedin link"
-              title="linkedIn"
-            >
+            <a href="/" className="social-ink" aria-label="linkedin link" title="linkedIn">
               <TfiLinkedin color="currentColor" size={"20"} />
             </a>
-            <a
-              href="/"
-              className="social-ink"
-              aria-label="facebook link"
-              title="facebook"
-            >
+            <a href="/" className="social-ink" aria-label="facebook link" title="facebook">
               <TfiFacebook color="currentColor" size={"20"} />
             </a>
           </div>
