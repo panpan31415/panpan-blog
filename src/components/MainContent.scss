@@ -187,6 +187,9 @@
   align-items: center;
   padding: 3rem 0;
   border-right: 0.5px solid var(--border-color);
+  &:last-of-type {
+    border-right: none;
+  }
   &__icon {
     height: 3rem;
     aspect-ratio: 1;
