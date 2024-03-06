@@ -156,6 +156,50 @@
   }
 }
 
+.hobby-section {
+  @extend %section;
+  padding-bottom: 8rem;
+  border-bottom: 1px solid var(--border-color);
+  &__title {
+    @extend %title;
+  }
+  &__divider {
+    @extend %divider;
+    width: 2.5rem;
+    margin: 1.6rem 0;
+  }
+  &__subtitle {
+    @extend %subtitle;
+  }
+  &__items {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.hobby-item {
+  background-color: var(--highlight-color);
+  color: var(--section-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  border-right: 0.5px solid var(--border-color);
+  &__icon {
+    height: 3rem;
+    aspect-ratio: 1;
+  }
+  &__name {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+}
+
 .children {
   height: 100vh;
   &--1 {

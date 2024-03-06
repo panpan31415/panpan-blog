@@ -4,6 +4,9 @@ import "./MainContent.scss";
 import { educations, experiences, skills } from "../profile-data";
 import SkillItem from "./SkillItem";
 import HistoryItem from "./HistoryItem";
+import { BsBookHalf, BsMusicNoteBeamed, BsSteam, BsYinYang } from "react-icons/bs";
+import { PiCookingPotBold } from "react-icons/pi";
+
 export default function MainContent() {
   const ref = useRef(null);
   const size = useComponentSize(ref);
@@ -82,6 +85,51 @@ export default function MainContent() {
             ))}
           </div>
         </div>
+      </section>
+      <section className="hobby-section" id="hobbies">
+        <h2 className="hobby-section__title">Hobbies</h2>
+        <div className="hobby-section__divider" />
+        <p className="hobby-section__subtitle"> Curious introvert & Passionate Explorer</p>
+        <div className="hobby-section__items">
+          <div className="hobby-item">
+            <div className="hobby-item__icon">
+              <BsMusicNoteBeamed size={"100%"} color="currentColor" />
+            </div>
+            <p className="hobby-item__name">music</p>
+          </div>
+          <div className="hobby-item">
+            <div className="hobby-item__icon">
+              <BsYinYang size={"100%"} color="currentColor" />
+            </div>
+            <p className="hobby-item__name">meditation</p>
+          </div>
+          <div className="hobby-item">
+            <div className="hobby-item__icon">
+              <BsSteam size={"100%"} color="currentColor" />
+            </div>
+            <p className="hobby-item__name">gaming</p>
+          </div>
+          <div className="hobby-item">
+            <div className="hobby-item__icon">
+              <BsBookHalf size={"100%"} color="currentColor" />
+            </div>
+            <p className="hobby-item__name">reading</p>
+          </div>
+          <div className="hobby-item">
+            <div className="hobby-item__icon">
+              <PiCookingPotBold size={"100%"} color="currentColor" />
+            </div>
+            <p className="hobby-item__name">cooking</p>
+          </div>
+        </div>
+
+        {/* 
+          1. meditation
+          2. psychology
+          3. music
+          4. reading
+          5. cooking
+         */}
       </section>
 
       <div className="children--3" id={"contact"}>
