@@ -122,14 +122,6 @@ export default function MainContent() {
             <p className="hobby-item__name">cooking</p>
           </div>
         </div>
-
-        {/* 
-          1. meditation
-          2. psychology
-          3. music
-          4. reading
-          5. cooking
-         */}
       </section>
 
       <div className="children--3" id={"contact"}>
