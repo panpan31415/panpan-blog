@@ -17,7 +17,7 @@ export default function NavigationArea() {
               Panpan<span className="logo--highlight">.</span>
             </p>
           </div>
-          <ul className="navigation">
+          <menu className="navigation">
             <li>
               <SmoothScrollLink to="/home">Home</SmoothScrollLink>
             </li>
@@ -30,15 +30,30 @@ export default function NavigationArea() {
             <li>
               <SmoothScrollLink to="/contact">Contact</SmoothScrollLink>
             </li>
-          </ul>
+          </menu>
           <div className="social-area">
-            <a href="/" className="social-ink" aria-label="github link">
+            <a
+              href="/"
+              className="social-ink"
+              aria-label="github link"
+              title="github"
+            >
               <TfiGithub color="currentColor" size={"20"} />
             </a>
-            <a href="/" className="social-ink" aria-label="linkedin link">
+            <a
+              href="/"
+              className="social-ink"
+              aria-label="linkedin link"
+              title="linkedIn"
+            >
               <TfiLinkedin color="currentColor" size={"20"} />
             </a>
-            <a href="/" className="social-ink" aria-label="facebook link">
+            <a
+              href="/"
+              className="social-ink"
+              aria-label="facebook link"
+              title="facebook"
+            >
               <TfiFacebook color="currentColor" size={"20"} />
             </a>
           </div>
