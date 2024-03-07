@@ -360,6 +360,13 @@
   }
 }
 .testimonial {
+  &::before {
+    content: open-quote;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--border-color);
+  }
   &__description {
     color: var(--text-default-color);
     font-size: 2rem;
@@ -384,10 +391,64 @@
     font-weight: 400;
     color: var(--text-default-color);
   }
-
   &__profile-picture {
     width: 6rem;
     aspect-ratio: 1;
     border-radius: 50%;
+  }
+}
+.contact-section {
+  @extend %section;
+  border-bottom: 1px solid var(--border-color);
+  &__title {
+    @extend %title;
+  }
+  &__divider {
+    @extend %divider;
+    width: 2.5rem;
+    margin: 1.6rem 0;
+  }
+  &__subtitle {
+    @extend %subtitle;
+  }
+  &__items {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .contact-item {
+      margin: 1rem 0;
+      &__method {
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--primary-color);
+      }
+      &__text {
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
+
+.copyright-section {
+  @extend %section;
+  padding-bottom: 7rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--text-default-color);
+  text-align: center;
+  a {
+    text-decoration: none;
+    &,
+    &:active,
+    &:focus,
+    &:visited {
+      color: var(--primary-color);
+    }
   }
 }

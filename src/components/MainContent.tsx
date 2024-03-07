@@ -252,6 +252,30 @@ export default function MainContent() {
           </div>
         </div>
       </section>
+
+      <section className="contact-section" id="contact">
+        <h2 className="contact-section__title">Contact</h2>
+        <div className="contact-section__divider" />
+        <p className="contact-section__subtitle"> Available now</p>
+        <div className="contact-section__items">
+          <div className="contact-item">
+            <p className="contact-item__method">Email</p>
+            <p className="contact-item__text">panpan31415@gmail.com</p>
+          </div>
+          <div className="contact-item">
+            <p className="contact-item__method">Phone</p>
+            <p className="contact-item__text">+45 52686386</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="copyright-section">
+        <p>
+          This site's design was created by{" "}
+          <a href="https://themeforest.net/user/caliberthemes">© 2024 CaliberThemes</a> and is used by{" "}
+          <a href="https//www.panpan.dk">Panpan</a> under the terms of themeforest regular license. All rights reserved.
+        </p>
+      </section>
     </main>
   );
 }
