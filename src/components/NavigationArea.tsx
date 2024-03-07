@@ -32,13 +32,28 @@ export default function NavigationArea() {
             </li>
           </menu>
           <div className="social-area">
-            <a href="/" className="social-ink" aria-label="github link" title="github">
+            <a
+              href="https://github.com/panpan31415?tab=repositories"
+              className="social-ink"
+              aria-label="github link"
+              title="github"
+            >
               <TfiGithub color="currentColor" size={"20"} />
             </a>
-            <a href="/" className="social-ink" aria-label="linkedin link" title="linkedIn">
+            <a
+              href="https://www.linkedin.com/in/panpan-zhang/"
+              className="social-ink"
+              aria-label="linkedin link"
+              title="linkedIn"
+            >
               <TfiLinkedin color="currentColor" size={"20"} />
             </a>
-            <a href="/" className="social-ink" aria-label="facebook link" title="facebook">
+            <a
+              href="https://www.facebook.com/Panpan86"
+              className="social-ink"
+              aria-label="facebook link"
+              title="facebook"
+            >
               <TfiFacebook color="currentColor" size={"20"} />
             </a>
           </div>
