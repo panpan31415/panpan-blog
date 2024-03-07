@@ -12,7 +12,7 @@ export default function NavigationArea() {
         <div className="left-area" />
         <div className="navigation-area">
           <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className={`menu-button__hamburg-icon ${menuOpen ? "" : "menu-button__hamburg-icon--close"}`}></span>
+            <span className={`menu-button__hamburg-icon ${!menuOpen ? "" : "menu-button__hamburg-icon--close"}`}></span>
             <p className="menu-button__text">menu</p>
           </button>
           <div className="logo">
@@ -20,27 +20,37 @@ export default function NavigationArea() {
               Panpan<span className="logo--highlight">.</span>
             </p>
           </div>
-          <menu className="navigation">
+          <menu className={`navigation ${menuOpen ? "" : "navigation--close"}`}>
             <li>
-              <SmoothScrollLink to="/home">Home</SmoothScrollLink>
+              <SmoothScrollLink to="/home" callback={() => setMenuOpen(false)}>
+                Home
+              </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/about">About</SmoothScrollLink>
+              <SmoothScrollLink to="/about" callback={() => setMenuOpen(false)}>
+                About
+              </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/resume">Resume</SmoothScrollLink>
+              <SmoothScrollLink to="/resume" callback={() => setMenuOpen(false)}>
+                Resume
+              </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/portfolio">portfolio</SmoothScrollLink>
+              <SmoothScrollLink to="/portfolio" callback={() => setMenuOpen(false)}>
+                portfolio
+              </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/contact">contact</SmoothScrollLink>
+              <SmoothScrollLink to="/contact" callback={() => setMenuOpen(false)}>
+                contact
+              </SmoothScrollLink>
             </li>
           </menu>
           <div className="social-area">
             <a
               href="https://github.com/panpan31415?tab=repositories"
-              className="social-ink"
+              className="social-link"
               aria-label="github link"
               title="github"
             >
@@ -48,7 +58,7 @@ export default function NavigationArea() {
             </a>
             <a
               href="https://www.linkedin.com/in/panpan-zhang/"
-              className="social-ink"
+              className="social-link"
               aria-label="linkedin link"
               title="linkedIn"
             >
@@ -56,7 +66,7 @@ export default function NavigationArea() {
             </a>
             <a
               href="https://www.facebook.com/Panpan86"
-              className="social-ink"
+              className="social-link"
               aria-label="facebook link"
               title="facebook"
             >
