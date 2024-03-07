@@ -262,7 +262,7 @@ export default function MainContent() {
       <section className="contact-section" id="contact">
         <h2 className="contact-section__title">Contact</h2>
         <div className="contact-section__divider" />
-        <p className="contact-section__subtitle"> Do you need a frontend developer? I am available now</p>
+        <p className="contact-section__subtitle"> Do you need a frontend developer? I am available now.</p>
         <div className="contact-section__items">
           <div className="contact-item">
             <p className="contact-item__method">Email</p>
@@ -277,10 +277,20 @@ export default function MainContent() {
 
       <section className="copyright-section">
         <p>
+          The profile image was captured by <a href="https://www.photosbykawa.com/">Ms. Kamila Kawa</a>, a talented
+          photographer.
+        </p>
+        <p>
           This site's design was created by{" "}
-          <a href="https://themeforest.net/user/caliberthemes">© 2024 CaliberThemes</a> and is rebuilt by{" "}
-          <a href="https//www.panpan.dk">Panpan</a> with ReactJS under the terms of themeforest regular license. All
-          rights reserved.
+          <a href="https://themeforest.net/user/caliberthemes" target="_blank" rel="noreferrer">
+            © 2024 CaliberThemes
+          </a>{" "}
+          and was rebuilt by{" "}
+          <a href="https://www.panpan.dk/" target="_blank" rel="noreferrer">
+            Panpan
+          </a>{" "}
+          with ReactJS under the terms of themeforest regular license.
+          <br /> All rights reserved.
         </p>
       </section>
     </main>

@@ -16,6 +16,13 @@
   border: 3rem solid var(--secondary-color);
   pointer-events: none;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    border-left: none;
+    border-right: 0;
+    border-bottom: none;
+  }
 }
 
 %section {
@@ -23,6 +30,12 @@
   width: 100%;
   background-color: var(--section-background-color);
   padding: 4rem 7rem 0 7rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-bottom: none;
+  }
 }
 
 %title {
@@ -108,6 +121,9 @@
         color: var(--text-white-color);
       }
     }
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 .about-section {
@@ -135,6 +151,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem 4rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 .resume-section {
@@ -157,6 +176,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
   }
 }
 
@@ -179,6 +202,9 @@
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 .hobby-item {
@@ -204,6 +230,12 @@
     margin-top: 1rem;
     text-transform: uppercase;
   }
+  @media screen and (max-width: 768px) {
+    border-right: unset;
+    &:not(:last-child) {
+      border-bottom: 0.5px solid var(--border-color);
+    }
+  }
 }
 .portfolio-section {
   @extend %section;
@@ -226,6 +258,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-bottom: 5rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__show-more {
@@ -253,6 +288,9 @@
     margin-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 .portfolio-item {
@@ -315,6 +353,7 @@
     background-color: #101d2c;
   }
   &--hotel {
+    @extend .portfolio-item;
     background-color: #ba265d;
   }
 }
@@ -342,6 +381,9 @@
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
+  }
+  @media screen and (max-width: 768px) {
+    border-bottom: 0.5px solid var(--border-color);
   }
 }
 
