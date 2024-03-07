@@ -1,17 +1,20 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./NavigationArea.scss";
-import { useComponentSize } from "../utilities";
 import SmoothScrollLink from "./SmoothScrollLink";
 import { TfiLinkedin, TfiFacebook, TfiGithub } from "react-icons/tfi";
 
 export default function NavigationArea() {
   const headerRef = useRef(null);
-  const size = useComponentSize(headerRef);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="header" ref={headerRef}>
-      <div className="fixed-area" style={{ width: size.width }}>
+      <div className="fixed-nav-area">
         <div className="left-area" />
         <div className="navigation-area">
+          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
+            <span className={`menu-button__hamburg-icon ${menuOpen ? "" : "menu-button__hamburg-icon--close"}`}></span>
+            <p className="menu-button__text">menu</p>
+          </button>
           <div className="logo">
             <p>
               Panpan<span className="logo--highlight">.</span>
