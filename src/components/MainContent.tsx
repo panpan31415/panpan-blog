@@ -13,7 +13,6 @@ export default function MainContent() {
   return (
     <main className="main" ref={ref}>
       <div className="content-frame" style={{ width: size.width }} />
-
       <section className="home-section" id={"home"}>
         <div className="home-section__intro">
           <p className="home-section__hello">Hi, I'm</p>
@@ -35,7 +34,6 @@ export default function MainContent() {
           View Portfolio
         </a>
       </div>
-
       <section className="about-section" id="about">
         <h2 className="about-section__title">About</h2>
         <div className="about-section__divider" />
@@ -123,7 +121,6 @@ export default function MainContent() {
           </div>
         </div>
       </section>
-
       <section className="portfolio-section" id="portfolio">
         <h2 className="portfolio-section__title">Portfolio</h2>
         <div className="portfolio-section__divider" />
@@ -227,6 +224,31 @@ export default function MainContent() {
           <div className="portfolio-summary-item">
             <p className="portfolio-summary-item__number">5+</p>
             <div className="portfolio-summary-item__text">certifications earned </div>
+          </div>
+        </div>
+      </section>
+      <section className="testimonials-section" id="testimonials">
+        <h2 className="testimonials-section__title">Testimonials</h2>
+        <div className="testimonials-section__divider" />
+        <div className="testimonials-section__items">
+          <div className="testimonial">
+            <p className="testimonial__description">
+              I had the pleasure of working with Panpan during his time in Optumce. Panpan is very eager to work and
+              when set on a task he strives to complete on time. Panpan seeks to understand the assignments he is given
+              to the fullest, even if the underlying theory is outside his field of work. If you appreciate a hard
+              working employee, open to learn new things, this is your guy.{" "}
+            </p>
+            <div className="testimonial__author">
+              <img
+                src="https://media.licdn.com/dms/image/C4D03AQH0OUWB2vq8VA/profile-displayphoto-shrink_100_100/0/1581327880885?e=1715212800&v=beta&t=y1qPJ23xM81bjuo2LOPxzLUuxToWRge4z65dI-ZOEuw"
+                alt="testimonial profile"
+                className="testimonial__profile-picture"
+              />
+              <div>
+                <p className="testimonial__name">Rasmus Brøndum</p>
+                <p className="testimonial__position">Senior Measurement Engineer at Ørsted</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
