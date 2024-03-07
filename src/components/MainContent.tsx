@@ -6,6 +6,8 @@ import SkillItem from "./SkillItem";
 import HistoryItem from "./HistoryItem";
 import { BsBookHalf, BsMusicNoteBeamed, BsSteam, BsYinYang } from "react-icons/bs";
 import { PiCookingPotBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { scrollToElement } from "./SmoothScrollLink";
 
 export default function MainContent() {
   const ref = useRef(null);
@@ -27,12 +29,16 @@ export default function MainContent() {
         <div className="home-section__profile"></div>
       </section>
       <div className="home-section__links">
-        <a className="home-section__links--left" href="/">
+        <a
+          className="home-section__links--left"
+          download
+          href="https://s3.eu-west-1.amazonaws.com/panpan.dk/files/CV.pdf"
+        >
           DOWNLOAD RESUME
         </a>
-        <a className="home-section__links--right" href="/">
+        <Link className="home-section__links--right" to="#portfolio" onClick={(e) => scrollToElement(e, "portfolio")}>
           View Portfolio
-        </a>
+        </Link>
       </div>
       <section className="about-section" id="about">
         <h2 className="about-section__title">About</h2>

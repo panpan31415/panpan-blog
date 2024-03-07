@@ -30,6 +30,9 @@ export default function NavigationArea() {
             <li>
               <SmoothScrollLink to="/portfolio">portfolio</SmoothScrollLink>
             </li>
+            <li>
+              <SmoothScrollLink to="/contact">contact</SmoothScrollLink>
+            </li>
           </menu>
           <div className="social-area">
             <a
