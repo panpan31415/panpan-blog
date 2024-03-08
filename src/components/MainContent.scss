@@ -403,46 +403,10 @@
     margin-top: 4rem;
     margin-bottom: 5rem;
     position: relative;
+    overflow: hidden;
   }
 }
-.testimonial {
-  &::before {
-    content: open-quote;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 900;
-    font-size: 4rem;
-    color: var(--border-color);
-  }
-  &__description {
-    color: var(--text-default-color);
-    font-size: 2rem;
-    font-style: italic;
-    line-height: 3.2rem;
-    margin-bottom: 1.2rem;
-  }
-  &__author {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
-  }
-  &__name {
-    font-size: 1.7rem;
-    font-weight: 500;
-    line-height: 2.1rem;
-    color: var(--primary-color);
-    display: inline;
-  }
-  &__position {
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--text-default-color);
-  }
-  &__profile-picture {
-    width: 6rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-  }
-}
+
 .contact-section {
   @extend %section;
   border-bottom: 1px solid var(--border-color);
@@ -462,7 +426,6 @@
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
-
     .contact-item {
       margin: 1rem 0;
       &__method {

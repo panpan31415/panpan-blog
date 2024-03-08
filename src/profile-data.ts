@@ -148,7 +148,7 @@ export const experiences: ExperienceItem[] = [
   },
 ];
 
-type Testimonial = {
+export type Testimonial = {
   authorName: string;
   picture: string;
   position: string;
@@ -156,7 +156,15 @@ type Testimonial = {
 };
 export const testimonials: Testimonial[] = [
   {
-    authorName: "Rasmus Brøndum",
+    authorName: "Rasmus Brøndum 1",
+    picture:
+      "https://media.licdn.com/dms/image/C4D03AQH0OUWB2vq8VA/profile-displayphoto-shrink_100_100/0/1581327880885?e=1715212800&v=beta&t=y1qPJ23xM81bjuo2LOPxzLUuxToWRge4z65dI-ZOEuw",
+    position: "Senior Measurement Engineer at Ørsted",
+    description:
+      "I had the pleasure of working with Panpan during his time in Optumce. Panpan is very eager to work and when set on a task he strives to complete on time. Panpan seeks to understand the assignments he is given to the fullest, even if the underlying theory is outside his field of work. If you appreciate a hard working employee, open to learn new things, this is your guy. ",
+  },
+  {
+    authorName: "Rasmus Brøndum 2",
     picture:
       "https://media.licdn.com/dms/image/C4D03AQH0OUWB2vq8VA/profile-displayphoto-shrink_100_100/0/1581327880885?e=1715212800&v=beta&t=y1qPJ23xM81bjuo2LOPxzLUuxToWRge4z65dI-ZOEuw",
     position: "Senior Measurement Engineer at Ørsted",

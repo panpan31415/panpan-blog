@@ -8,6 +8,7 @@ import { BsBookHalf, BsMusicNoteBeamed, BsSteam, BsYinYang } from "react-icons/b
 import { PiCookingPotBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { scrollToElement } from "./SmoothScrollLink";
+import TestimonialContainer from "./Testimonial";
 
 export default function MainContent() {
   const ref = useRef(null);
@@ -71,7 +72,7 @@ export default function MainContent() {
                   subtitle: education.major,
                   descriptions: education.descriptions,
                 }}
-                key={index}
+                key={"education" + index}
               />
             ))}
           </div>
@@ -84,7 +85,7 @@ export default function MainContent() {
                   subtitle: experience.companyName,
                   descriptions: experience.descriptions,
                 }}
-                key={index}
+                key={"experience" + index}
               />
             ))}
           </div>
@@ -228,7 +229,7 @@ export default function MainContent() {
             <div className="portfolio-summary-item__text">years professional experience</div>
           </div>
           <div className="portfolio-summary-item">
-            <p className="portfolio-summary-item__number">5+</p>
+            <p className="portfolio-summary-item__number">5</p>
             <div className="portfolio-summary-item__text">certifications earned </div>
           </div>
         </div>
@@ -236,27 +237,7 @@ export default function MainContent() {
       <section className="testimonials-section" id="testimonials">
         <h2 className="testimonials-section__title">Testimonials</h2>
         <div className="testimonials-section__divider" />
-        <div className="testimonials-section__items">
-          <div className="testimonial">
-            <p className="testimonial__description">
-              I had the pleasure of working with Panpan during his time in Optumce. Panpan is very eager to work and
-              when set on a task he strives to complete on time. Panpan seeks to understand the assignments he is given
-              to the fullest, even if the underlying theory is outside his field of work. If you appreciate a hard
-              working employee, open to learn new things, this is your guy.{" "}
-            </p>
-            <div className="testimonial__author">
-              <img
-                src="https://media.licdn.com/dms/image/C4D03AQH0OUWB2vq8VA/profile-displayphoto-shrink_100_100/0/1581327880885?e=1715212800&v=beta&t=y1qPJ23xM81bjuo2LOPxzLUuxToWRge4z65dI-ZOEuw"
-                alt="testimonial profile"
-                className="testimonial__profile-picture"
-              />
-              <div>
-                <p className="testimonial__name">Rasmus Brøndum</p>
-                <p className="testimonial__position">Senior Measurement Engineer at Ørsted</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TestimonialContainer />
       </section>
 
       <section className="contact-section" id="contact">

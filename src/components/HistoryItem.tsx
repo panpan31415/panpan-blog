@@ -18,15 +18,15 @@ export default function HistoryItem({ item }: HistoryItemProps) {
       <div className="history-item__subtitle">{item.subtitle}</div>
       <div className="history-item__description">
         <ul>
-          {item.descriptions.map((description) => {
+          {item.descriptions.map((description, index) => {
             if (description.includes(":")) {
               return (
-                <li>
+                <li key={index}>
                   <span>{description.split(":")[0].trim()}:</span> {description.split(":")[1].trim()}
                 </li>
               );
             }
-            return <li>{description}</li>;
+            return <li key={index}>{description}</li>;
           })}
         </ul>
       </div>
