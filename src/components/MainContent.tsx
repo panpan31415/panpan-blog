@@ -27,7 +27,13 @@ export default function MainContent() {
           <div className="home-section__divider" />
           <p className="home-section__position">Frontend Developer</p>
         </div>
-        <div className="home-section__profile"></div>
+        <div className="home-section__profile">
+          <img
+            src="https://s3.eu-west-1.amazonaws.com/panpan.dk/images/profile_900w.jpeg"
+            alt="panpan profile
+          "
+          ></img>
+        </div>
       </section>
       <div className="home-section__links">
         <a

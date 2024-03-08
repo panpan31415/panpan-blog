@@ -63,12 +63,16 @@
   display: grid;
   grid-template-columns: 4fr 6fr;
   padding: 7rem 6rem 0 6rem; // should cover content-frame border;
+  border-bottom: none;
   &__intro {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 15rem 0;
+    @media screen and (max-width: 768px) {
+      margin: 3rem 0 -6rem 0;
+    }
   }
   &__hello {
     color: var(--highlight-color);
@@ -92,7 +96,11 @@
     font-weight: 400;
   }
   &__profile {
-    background-color: aquamarine;
+    align-self: end;
+    img {
+      object-fit: contain;
+      object-position: bottom;
+    }
   }
 
   &__links {
@@ -124,6 +132,9 @@
     @media screen and (max-width: 768px) {
       padding: 0;
     }
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 }
 .about-section {
