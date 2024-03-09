@@ -44,7 +44,19 @@ export const skills: Skill[] = [
     value: 40,
   },
   {
-    name: "StyleX",
+    name: "SQL",
+    value: 60,
+  },
+  {
+    name: "C#",
+    value: 60,
+  },
+  {
+    name: "Java",
+    value: 60,
+  },
+  {
+    name: "AWS",
     value: 60,
   },
 ];
@@ -74,8 +86,6 @@ export const educations: EducationItem[] = [
     Front-end Programming: Proficient in HTML5, CSS3, jQuery, and jQuery Mobile. Experienced in developing hybrid applications.`,
       `
     CMS: Skilled in Drupal 7 and various other content management systems.`,
-      `
-    Grade average:above 7. `,
       `
     Academic Achievement: Maintained a grade average above 7, reflecting consistent academic excellence.`,
       `
