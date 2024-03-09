@@ -38,7 +38,7 @@ export default function MainContent() {
       <div className="home-section__links">
         <a
           className="home-section__links--left"
-          download
+          download={true}
           href="https://s3.eu-west-1.amazonaws.com/panpan.dk/files/CV.pdf"
         >
           DOWNLOAD RESUME
