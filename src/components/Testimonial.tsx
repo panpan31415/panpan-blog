@@ -6,8 +6,8 @@ import { useComponentSize } from "../utilities";
 type TestimonialItemProps = {
   testimonial: Testimonial;
   itemRef: RefObject<HTMLDivElement>;
-  onMouseDown: MouseEventHandler<HTMLDivElement>;
-  onMouseUp: MouseEventHandler<HTMLDivElement>;
+  onMouseDown: () => void;
+  onMouseUp: () => void;
   updateUI: (height: number) => void;
 };
 function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp, updateUI }: TestimonialItemProps) {
@@ -17,7 +17,15 @@ function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp, updateU
   }, [size.height, updateUI]);
 
   return (
-    <div className="testimonial" ref={itemRef} onMouseDown={onMouseDown} onMouseUp={onMouseUp}>
+    <div
+      className="testimonial"
+      ref={itemRef}
+      onMouseDown={onMouseDown}
+      onTouchStart={onMouseDown}
+      onMouseUp={onMouseUp}
+      onTouchCancel={onMouseUp}
+      onTouchEnd={onMouseUp}
+    >
       <p className="testimonial__description">{testimonial.description}</p>
       <div className="testimonial__author">
         <img src={testimonial.picture} alt="testimonial profile" className="testimonial__profile-picture" />
@@ -49,10 +57,10 @@ export default function TestimonialContainer() {
     }
   });
 
-  const stopCarousal: MouseEventHandler<HTMLDivElement> = () => {
+  const stopCarousal = () => {
     setAnimationState("paused");
   };
-  const resumeCarousal: MouseEventHandler<HTMLDivElement> = () => {
+  const resumeCarousal = () => {
     setAnimationState("running");
   };
 
