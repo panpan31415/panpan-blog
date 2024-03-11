@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import { useComponentSize } from "../utilities";
 import "./MainContent.scss";
 import { educations, experiences, skills } from "../profile-data";
 import SkillItem from "./SkillItem";
@@ -11,11 +9,9 @@ import { scrollToElement } from "./SmoothScrollLink";
 import TestimonialContainer from "./Testimonial";
 
 export default function MainContent() {
-  const ref = useRef(null);
-  const size = useComponentSize(ref);
   return (
-    <main className="main" ref={ref}>
-      <div className="content-frame" style={{ width: size.width }} />
+    <main className="main">
+      <div className="content-frame" />
       <section className="home-section" id={"home"}>
         <div className="home-section__intro">
           <p className="home-section__hello">Hi, I'm</p>

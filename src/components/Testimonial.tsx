@@ -1,14 +1,21 @@
-import { MouseEventHandler, Ref, useEffect, useRef, useState } from "react";
+import { MouseEventHandler, RefObject, useEffect, useRef, useState } from "react";
 import { Testimonial, testimonials } from "../profile-data";
 import "./Testimonial.scss";
+import { useComponentSize } from "../utilities";
 
 type TestimonialItemProps = {
   testimonial: Testimonial;
-  itemRef: Ref<HTMLDivElement>;
+  itemRef: RefObject<HTMLDivElement>;
   onMouseDown: MouseEventHandler<HTMLDivElement>;
   onMouseUp: MouseEventHandler<HTMLDivElement>;
+  updateUI: (height: number) => void;
 };
-function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp }: TestimonialItemProps) {
+function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp, updateUI }: TestimonialItemProps) {
+  const size = useComponentSize(itemRef);
+  useEffect(() => {
+    updateUI(size.height);
+  }, [size.height, updateUI]);
+
   return (
     <div className="testimonial" ref={itemRef} onMouseDown={onMouseDown} onMouseUp={onMouseUp}>
       <p className="testimonial__description">{testimonial.description}</p>
@@ -26,6 +33,8 @@ export default function TestimonialContainer() {
   //   const [animationTick, setAnimationTick] = useState(0);
   const [dataIndex, setDataIndex] = useState(0);
   const [animationState, setAnimationState] = useState<"paused" | "running">("running");
+  const [item1Height, setItem1height] = useState(0);
+  const [item2Height, setItem2height] = useState(0);
   const item1Ref = useRef<HTMLDivElement>(null);
   const item2Ref = useRef<HTMLDivElement>(null);
   const animationDurationSeconds = 20; //sec
@@ -51,7 +60,7 @@ export default function TestimonialContainer() {
     <div
       className="testimonials-section__items"
       style={{
-        height: Math.max(item1Ref.current?.offsetHeight || 0, item2Ref.current?.offsetHeight || 0),
+        height: Math.max(item1Height, item2Height) + "px",
       }}
     >
       <div
@@ -64,6 +73,7 @@ export default function TestimonialContainer() {
           key={dataIndex + testimonials.length}
           onMouseDown={stopCarousal}
           onMouseUp={resumeCarousal}
+          updateUI={setItem1height}
         />
       </div>
       <div
@@ -80,6 +90,7 @@ export default function TestimonialContainer() {
           key={dataIndex + testimonials.length}
           onMouseDown={stopCarousal}
           onMouseUp={resumeCarousal}
+          updateUI={setItem2height}
         />
       </div>
     </div>
