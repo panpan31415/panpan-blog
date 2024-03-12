@@ -1,4 +1,4 @@
-import { MouseEventHandler, RefObject, useEffect, useRef, useState } from "react";
+import {  RefObject, useEffect, useRef, useState } from "react";
 import { Testimonial, testimonials } from "../profile-data";
 import "./Testimonial.scss";
 import { useComponentSize } from "../utilities";
@@ -8,13 +8,9 @@ type TestimonialItemProps = {
   itemRef: RefObject<HTMLDivElement>;
   onMouseDown: () => void;
   onMouseUp: () => void;
-  updateUI: (height: number) => void;
 };
-function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp, updateUI }: TestimonialItemProps) {
-  const size = useComponentSize(itemRef);
-  useEffect(() => {
-    updateUI(size.height);
-  }, [size.height, updateUI]);
+function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp }: TestimonialItemProps) {
+ 
 
   return (
     <div
@@ -41,10 +37,10 @@ export default function TestimonialContainer() {
   //   const [animationTick, setAnimationTick] = useState(0);
   const [dataIndex, setDataIndex] = useState(0);
   const [animationState, setAnimationState] = useState<"paused" | "running">("running");
-  const [item1Height, setItem1height] = useState(0);
-  const [item2Height, setItem2height] = useState(0);
   const item1Ref = useRef<HTMLDivElement>(null);
   const item2Ref = useRef<HTMLDivElement>(null);
+  const item1Height = useComponentSize(item1Ref).height
+  const item2Height = useComponentSize(item2Ref).height
   const animationDurationSeconds = 20; //sec
   useEffect(() => {
     if (item2Ref && item2Ref.current) {
@@ -81,7 +77,6 @@ export default function TestimonialContainer() {
           key={dataIndex + testimonials.length}
           onMouseDown={stopCarousal}
           onMouseUp={resumeCarousal}
-          updateUI={setItem1height}
         />
       </div>
       <div
@@ -98,7 +93,6 @@ export default function TestimonialContainer() {
           key={dataIndex + testimonials.length}
           onMouseDown={stopCarousal}
           onMouseUp={resumeCarousal}
-          updateUI={setItem2height}
         />
       </div>
     </div>

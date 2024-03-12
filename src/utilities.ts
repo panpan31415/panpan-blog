@@ -11,10 +11,8 @@ export function useComponentSize(ref: React.RefObject<HTMLDivElement>) {
       setSize(size);
     };
     updateSize();
-    window.addEventListener("load", updateSize);
     window.addEventListener("resize", updateSize);
     return () => {
-      window.removeEventListener("load", updateSize);
       window.removeEventListener("resize", updateSize);
     };
   }, [ref]);
