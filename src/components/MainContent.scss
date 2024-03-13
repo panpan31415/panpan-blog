@@ -467,7 +467,7 @@
     color: var(--text-default-color);
     text-align: center;
     a {
-        text-decoration: none;
+        text-decoration: underline;
         &,
         &:active,
         &:focus,
