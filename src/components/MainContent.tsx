@@ -51,8 +51,7 @@ export default function MainContent() {
                                (min-width: 400px) 300px,
                                 300px"
                         src={`${imgBaseUrl}profile-img_800w.webp`}
-                        alt='panpan profile
-          '
+                        alt='panpan profile'
                     ></img>
                 </div>
             </section>
