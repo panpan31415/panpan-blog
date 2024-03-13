@@ -1,4 +1,4 @@
-import {  RefObject, useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import { Testimonial, testimonials } from "../profile-data";
 import "./Testimonial.scss";
 import { useComponentSize } from "../utilities";
@@ -9,9 +9,12 @@ type TestimonialItemProps = {
   onMouseDown: () => void;
   onMouseUp: () => void;
 };
-function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp }: TestimonialItemProps) {
- 
-
+function TestimonialItem({
+  testimonial,
+  itemRef,
+  onMouseDown,
+  onMouseUp,
+}: TestimonialItemProps) {
   return (
     <div
       className="testimonial"
@@ -24,7 +27,11 @@ function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp }: Testi
     >
       <p className="testimonial__description">{testimonial.description}</p>
       <div className="testimonial__author">
-        <img src={testimonial.picture} alt="testimonial profile" className="testimonial__profile-picture" />
+        <img
+          src={testimonial.picture}
+          alt="testimonial profile"
+          className="testimonial__profile-picture"
+        />
         <div>
           <p className="testimonial__name">{testimonial.authorName}</p>
           <p className="testimonial__position">{testimonial.position}</p>
@@ -36,11 +43,13 @@ function TestimonialItem({ testimonial, itemRef, onMouseDown, onMouseUp }: Testi
 export default function TestimonialContainer() {
   //   const [animationTick, setAnimationTick] = useState(0);
   const [dataIndex, setDataIndex] = useState(0);
-  const [animationState, setAnimationState] = useState<"paused" | "running">("running");
+  const [animationState, setAnimationState] = useState<"paused" | "running">(
+    "running",
+  );
   const item1Ref = useRef<HTMLDivElement>(null);
   const item2Ref = useRef<HTMLDivElement>(null);
-  const item1Height = useComponentSize(item1Ref).height
-  const item2Height = useComponentSize(item2Ref).height
+  const item1Height = useComponentSize(item1Ref).height;
+  const item2Height = useComponentSize(item2Ref).height;
   const animationDurationSeconds = 20; //sec
   useEffect(() => {
     if (item2Ref && item2Ref.current) {
@@ -69,11 +78,18 @@ export default function TestimonialContainer() {
     >
       <div
         className="carousal"
-        style={{ animationDuration: animationDurationSeconds + "s", animationPlayState: animationState }}
+        style={{
+          animationDuration: animationDurationSeconds + "s",
+          animationPlayState: animationState,
+        }}
       >
         <TestimonialItem
           itemRef={item1Ref}
-          testimonial={testimonials[(dataIndex + testimonials.length) % testimonials.length]}
+          testimonial={
+            testimonials[
+              (dataIndex + testimonials.length) % testimonials.length
+            ]
+          }
           key={dataIndex + testimonials.length}
           onMouseDown={stopCarousal}
           onMouseUp={resumeCarousal}
@@ -89,7 +105,11 @@ export default function TestimonialContainer() {
       >
         <TestimonialItem
           itemRef={item2Ref}
-          testimonial={testimonials[(dataIndex + 1 + testimonials.length) % testimonials.length]}
+          testimonial={
+            testimonials[
+              (dataIndex + 1 + testimonials.length) % testimonials.length
+            ]
+          }
           key={dataIndex + testimonials.length}
           onMouseDown={stopCarousal}
           onMouseUp={resumeCarousal}

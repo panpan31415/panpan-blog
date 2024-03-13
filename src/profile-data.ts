@@ -144,7 +144,8 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    logoImageUrl: "https://optumce.com/wp-content/uploads/2016/01/optumce-logo-white.png",
+    logoImageUrl:
+      "https://optumce.com/wp-content/uploads/2016/01/optumce-logo-white.png",
     imageAlt: "OptumCE Aps logo",
     logoBackgroundColor: "rgb(56,56,56)",
     position: "Frontend Developer",

@@ -2,7 +2,12 @@ import "./MainContent.scss";
 import { educations, experiences, skills } from "../profile-data";
 import SkillItem from "./SkillItem";
 import HistoryItem from "./HistoryItem";
-import { BsBookHalf, BsMusicNoteBeamed, BsSteam, BsYinYang } from "react-icons/bs";
+import {
+  BsBookHalf,
+  BsMusicNoteBeamed,
+  BsSteam,
+  BsYinYang,
+} from "react-icons/bs";
 import { PiCookingPotBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { scrollToElement } from "./SmoothScrollLink";
@@ -39,7 +44,11 @@ export default function MainContent() {
         >
           DOWNLOAD RESUME
         </a>
-        <Link className="home-section__links--right" to="#portfolio" onClick={(e) => scrollToElement(e, "portfolio")}>
+        <Link
+          className="home-section__links--right"
+          to="#portfolio"
+          onClick={(e) => scrollToElement(e, "portfolio")}
+        >
           View Portfolio
         </Link>
       </div>
@@ -48,11 +57,13 @@ export default function MainContent() {
         <div className="about-section__divider" />
         <p className="about-section__subtitle">Passionate & detail focused</p>
         <p className="about-section__introduction">
-          I am a Frontend Developer with three years of hands-on experience. I bring a strong foundation in React,
-          JavaScript, and CSS to the table. My passion for crafting seamless user interfaces drives me to seek a
-          position where I can challenge myself, innovate, and contribute significantly to projects that matter. I'm
-          eager to apply my expertise within a dynamic team, aiming to push the boundaries of web development and create
-          impactful digital experiences.
+          I am a Frontend Developer with three years of hands-on experience. I
+          bring a strong foundation in React, JavaScript, and CSS to the table.
+          My passion for crafting seamless user interfaces drives me to seek a
+          position where I can challenge myself, innovate, and contribute
+          significantly to projects that matter. I'm eager to apply my expertise
+          within a dynamic team, aiming to push the boundaries of web
+          development and create impactful digital experiences.
         </p>
         <div className="about-section__skill-area">
           {skills.map((skill, index) => (
@@ -96,7 +107,10 @@ export default function MainContent() {
       <section className="hobby-section" id="hobbies">
         <h2 className="hobby-section__title">Hobbies</h2>
         <div className="hobby-section__divider" />
-        <p className="hobby-section__subtitle"> Curious introvert & Passionate Explorer</p>
+        <p className="hobby-section__subtitle">
+          {" "}
+          Curious introvert & Passionate Explorer
+        </p>
         <div className="hobby-section__items">
           <div className="hobby-item">
             <div className="hobby-item__icon">
@@ -136,7 +150,12 @@ export default function MainContent() {
         <p className="portfolio-section__subtitle"> Skillful & Experienced</p>
         <div className="portfolio-section__items">
           <div className="portfolio-item--motosumo">
-            <a href="https://team.motosumo.com/" className="portfolio-item__link" target="_blank" rel="noreferrer">
+            <a
+              href="https://team.motosumo.com/"
+              className="portfolio-item__link"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="https://static1.squarespace.com/static/5f215ab150bec52030447111/t/60cccd0be0529c4c668475fa/1624034571565/ms_logo-vertical-white%401x.png"
                 alt="motosumo team-display application website"
@@ -157,11 +176,17 @@ export default function MainContent() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={require("../assets/webshop.png")} alt="web shop model" style={{ height: "inherit" }} />
+              <img
+                src={require("../assets/webshop.png")}
+                alt="web shop model"
+                style={{ height: "inherit" }}
+              />
               <div className="portfolio-item__cover">
                 <div>
                   <h4 className="portfolio-item__title">Web Shop</h4>
-                  <h5 className="portfolio-item__subtitle">React Practice Project</h5>
+                  <h5 className="portfolio-item__subtitle">
+                    React Practice Project
+                  </h5>
                 </div>
                 <span className="portfolio-item__deco-line" />
               </div>
@@ -182,7 +207,9 @@ export default function MainContent() {
               <div className="portfolio-item__cover">
                 <div>
                   <h4 className="portfolio-item__title">Nextor Agent</h4>
-                  <h5 className="portfolio-item__subtitle">A practice project build with CSS grid box</h5>
+                  <h5 className="portfolio-item__subtitle">
+                    A practice project build with CSS grid box
+                  </h5>
                 </div>
                 <span className="portfolio-item__deco-line" />
               </div>
@@ -203,7 +230,9 @@ export default function MainContent() {
               <div className="portfolio-item__cover">
                 <div>
                   <h4 className="portfolio-item__title">HOTEL LAS PALMAS</h4>
-                  <h5 className="portfolio-item__subtitle">A flexbox practice project with Jonas Schmedtmann</h5>
+                  <h5 className="portfolio-item__subtitle">
+                    A flexbox practice project with Jonas Schmedtmann
+                  </h5>
                 </div>
                 <span className="portfolio-item__deco-line" />
               </div>
@@ -224,15 +253,21 @@ export default function MainContent() {
         <div className="portfolio-section__summary">
           <div className="portfolio-summary-item">
             <p className="portfolio-summary-item__number">20+</p>
-            <div className="portfolio-summary-item__text">projects completed</div>
+            <div className="portfolio-summary-item__text">
+              projects completed
+            </div>
           </div>
           <div className="portfolio-summary-item">
             <p className="portfolio-summary-item__number">3+</p>
-            <div className="portfolio-summary-item__text">years professional experience</div>
+            <div className="portfolio-summary-item__text">
+              years professional experience
+            </div>
           </div>
           <div className="portfolio-summary-item">
             <p className="portfolio-summary-item__number">5</p>
-            <div className="portfolio-summary-item__text">certifications earned </div>
+            <div className="portfolio-summary-item__text">
+              certifications earned{" "}
+            </div>
           </div>
         </div>
       </section>
@@ -245,7 +280,10 @@ export default function MainContent() {
       <section className="contact-section" id="contact">
         <h2 className="contact-section__title">Contact</h2>
         <div className="contact-section__divider" />
-        <p className="contact-section__subtitle"> Do you need a frontend developer? I am available now.</p>
+        <p className="contact-section__subtitle">
+          {" "}
+          Do you need a frontend developer? I am available now.
+        </p>
         <div className="contact-section__items">
           <div className="contact-item">
             <p className="contact-item__method">Email</p>
@@ -260,12 +298,17 @@ export default function MainContent() {
 
       <section className="copyright-section">
         <p>
-          The profile image was captured by <a href="https://www.photosbykawa.com/">Ms. Kamila Kawa</a>, a talented
-          photographer.
+          The profile image was captured by{" "}
+          <a href="https://www.photosbykawa.com/">Ms. Kamila Kawa</a>, a
+          talented photographer.
         </p>
         <p>
           This site's design was created by{" "}
-          <a href="https://themeforest.net/user/caliberthemes" target="_blank" rel="noreferrer">
+          <a
+            href="https://themeforest.net/user/caliberthemes"
+            target="_blank"
+            rel="noreferrer"
+          >
             © 2024 CaliberThemes
           </a>{" "}
           and was rebuilt by{" "}

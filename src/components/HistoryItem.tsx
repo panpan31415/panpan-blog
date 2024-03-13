@@ -22,7 +22,8 @@ export default function HistoryItem({ item }: HistoryItemProps) {
             if (description.includes(":")) {
               return (
                 <li key={index}>
-                  <span>{description.split(":")[0].trim()}:</span> {description.split(":")[1].trim()}
+                  <span>{description.split(":")[0].trim()}:</span>{" "}
+                  {description.split(":")[1].trim()}
                 </li>
               );
             }

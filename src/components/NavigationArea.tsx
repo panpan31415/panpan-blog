@@ -11,8 +11,13 @@ export default function NavigationArea() {
       <div className="fixed-nav-area">
         <div className="left-area" />
         <div className="navigation-area">
-          <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
-            <span className={`menu-button__hamburg-icon ${!menuOpen ? "" : "menu-button__hamburg-icon--close"}`}></span>
+          <button
+            className="menu-button"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span
+              className={`menu-button__hamburg-icon ${!menuOpen ? "" : "menu-button__hamburg-icon--close"}`}
+            ></span>
             <p className="menu-button__text">menu</p>
           </button>
           <div className="logo">
@@ -32,17 +37,26 @@ export default function NavigationArea() {
               </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/resume" callback={() => setMenuOpen(false)}>
+              <SmoothScrollLink
+                to="/resume"
+                callback={() => setMenuOpen(false)}
+              >
                 Resume
               </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/portfolio" callback={() => setMenuOpen(false)}>
+              <SmoothScrollLink
+                to="/portfolio"
+                callback={() => setMenuOpen(false)}
+              >
                 portfolio
               </SmoothScrollLink>
             </li>
             <li>
-              <SmoothScrollLink to="/contact" callback={() => setMenuOpen(false)}>
+              <SmoothScrollLink
+                to="/contact"
+                callback={() => setMenuOpen(false)}
+              >
                 contact
               </SmoothScrollLink>
             </li>
