@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 import { scrollToElement } from './SmoothScrollLink';
 import TestimonialContainer from './Testimonial';
 
+const imgBaseUrl="https://s3.eu-west-1.amazonaws.com/panpan.dk/images/"
+
 export default function MainContent() {
     return (
         <main className='main'>
@@ -33,7 +35,22 @@ export default function MainContent() {
                 </div>
                 <div className='home-section__profile'>
                     <img
-                        src='https://s3.eu-west-1.amazonaws.com/panpan.dk/images/profile_900w.jpeg'
+                        srcSet={`${imgBaseUrl}profile-img_800w.webp 800w,
+                                 ${imgBaseUrl}profile-img_700w.webp 700w,
+                                 ${imgBaseUrl}profile-img_600w.webp 600w,
+                                 ${imgBaseUrl}profile-img_500w.webp 500w,
+                                 ${imgBaseUrl}profile-img_400w.webp 400w,
+                                 ${imgBaseUrl}profile-img_300w.webp 300w`}
+                        sizes="(min-width: 1200px) 500px,
+                               (min-width: 1024px) 600px,
+                               (min-width: 800px) 400px,
+                               (min-width: 768px) 700px,
+                               (min-width: 700px) 600px,
+                               (min-width: 600px) 500px,
+                               (min-width: 500px) 400px,
+                               (min-width: 400px) 300px,
+                                300px"
+                        src={`${imgBaseUrl}profile-img_800w.webp`}
                         alt='panpan profile
           '
                     ></img>
