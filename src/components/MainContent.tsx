@@ -35,7 +35,6 @@ export default function MainContent() {
                 </div>
                 <div className='home-section__profile'>
                     <img
-                        rel="preload"
                         srcSet={`${imgBaseUrl}profile-img_800w.webp 800w,
                                  ${imgBaseUrl}profile-img_700w.webp 700w,
                                  ${imgBaseUrl}profile-img_600w.webp 600w,
