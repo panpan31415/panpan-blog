@@ -1,23 +1,23 @@
 .skill-item {
-  &__row-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__skill-name,
-  &__skill-value {
-    font-size: 1.5rem;
-    line-height: 3.5rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    text-transform: cap;
-  }
-  &__progressbar {
-    height: 4px;
-    background-color: var(--progressbar-background-color);
-  }
-  &__progress {
-    height: 4px;
-    background-color: var(--highlight-color);
-  }
+    &__row-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__skill-name,
+    &__skill-value {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        text-transform: cap;
+    }
+    &__progressbar {
+        height: 4px;
+        background-color: var(--progressbar-background-color);
+    }
+    &__progress {
+        height: 4px;
+        background-color: var(--highlight-color);
+    }
 }
