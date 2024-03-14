@@ -20,7 +20,7 @@ const imgBaseUrl="https://s3.eu-west-1.amazonaws.com/panpan.dk/images/"
 export default function MainContent() {
   const mainRef = useRef(null)
   const size = useComponentSize(mainRef)
-  return (
+    return (
         <main className='main' ref={mainRef}>
             <div className='content-frame' style={{width:size.width}} />
             <section
@@ -30,15 +30,15 @@ export default function MainContent() {
                 <div className='home-section__intro'>
                     <p className='home-section__hello'>Hi, I'm</p>
                     <h1 className='home-section__name'>
-            Panpan
-            <br />
-            Zhang
-          </h1>
+                        Panpan
+                        <br />
+                        Zhang
+                    </h1>
                     <div className='home-section__divider' />
                     <p className='home-section__position'>Frontend Developer</p>
-        </div>
+                </div>
                 <div className='home-section__profile'>
-          <img
+                    <img
                         srcSet={`${imgBaseUrl}profile-img_800w.webp 800w,
                                  ${imgBaseUrl}profile-img_700w.webp 700w,
                                  ${imgBaseUrl}profile-img_600w.webp 600w,
@@ -56,25 +56,25 @@ export default function MainContent() {
                                 300px"
                         src={`${imgBaseUrl}profile-img_800w.webp`}
                         alt='panpan profile'
-          ></img>
-        </div>
-      </section>
+                    ></img>
+                </div>
+            </section>
             <div className='home-section__links'>
-        <a
+                <a
                     className='home-section__links--left'
-          download={true}
+                    download={true}
                     href='https://s3.eu-west-1.amazonaws.com/panpan.dk/files/CV.pdf'
-        >
-          DOWNLOAD RESUME
-        </a>
+                >
+                    DOWNLOAD RESUME
+                </a>
                 <Link
                     className='home-section__links--right'
                     to='#portfolio'
                     onClick={(e) => scrollToElement(e, 'portfolio')}
                 >
-          View Portfolio
-        </Link>
-      </div>
+                    View Portfolio
+                </Link>
+            </div>
             <section
                 className='about-section'
                 id='about'
@@ -94,16 +94,16 @@ export default function MainContent() {
                     expertise within a dynamic team, aiming to push the
                     boundaries of web development and create impactful digital
                     experiences.
-        </p>
+                </p>
                 <div className='about-section__skill-area'>
-          {skills.map((skill, index) => (
+                    {skills.map((skill, index) => (
                         <SkillItem
                             skill={skill}
                             key={index}
                         />
-          ))}
-        </div>
-      </section>
+                    ))}
+                </div>
+            </section>
             <section
                 className='resume-section'
                 id='resume'
@@ -115,33 +115,33 @@ export default function MainContent() {
                 </p>
                 <div className='resume-section__history'>
                     <div className='resume-section__education'>
-            {educations.map((education, index) => (
-              <HistoryItem
-                item={{
-                  date: education.period,
-                  title: education.universityName,
-                  subtitle: education.major,
-                  descriptions: education.descriptions,
-                }}
+                        {educations.map((education, index) => (
+                            <HistoryItem
+                                item={{
+                                    date: education.period,
+                                    title: education.universityName,
+                                    subtitle: education.major,
+                                    descriptions: education.descriptions,
+                                }}
                                 key={'education' + index}
-              />
-            ))}
-          </div>
+                            />
+                        ))}
+                    </div>
                     <div className='resume-section__experience'>
-            {experiences.map((experience, index) => (
-              <HistoryItem
-                item={{
-                  date: experience.period,
-                  title: experience.position,
-                  subtitle: experience.companyName,
-                  descriptions: experience.descriptions,
-                }}
+                        {experiences.map((experience, index) => (
+                            <HistoryItem
+                                item={{
+                                    date: experience.period,
+                                    title: experience.position,
+                                    subtitle: experience.companyName,
+                                    descriptions: experience.descriptions,
+                                }}
                                 key={'experience' + index}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
             <section
                 className='hobby-section'
                 id='hobbies'
@@ -159,47 +159,47 @@ export default function MainContent() {
                                 size={'100%'}
                                 color='currentColor'
                             />
-            </div>
+                        </div>
                         <p className='hobby-item__name'>music</p>
-          </div>
+                    </div>
                     <div className='hobby-item'>
                         <div className='hobby-item__icon'>
                             <BsYinYang
                                 size={'100%'}
                                 color='currentColor'
                             />
-            </div>
+                        </div>
                         <p className='hobby-item__name'>meditation</p>
-          </div>
+                    </div>
                     <div className='hobby-item'>
                         <div className='hobby-item__icon'>
                             <BsSteam
                                 size={'100%'}
                                 color='currentColor'
                             />
-            </div>
+                        </div>
                         <p className='hobby-item__name'>gaming</p>
-          </div>
+                    </div>
                     <div className='hobby-item'>
                         <div className='hobby-item__icon'>
                             <BsBookHalf
                                 size={'100%'}
                                 color='currentColor'
                             />
-            </div>
+                        </div>
                         <p className='hobby-item__name'>reading</p>
-          </div>
+                    </div>
                     <div className='hobby-item'>
                         <div className='hobby-item__icon'>
                             <PiCookingPotBold
                                 size={'100%'}
                                 color='currentColor'
                             />
-            </div>
+                        </div>
                         <p className='hobby-item__name'>cooking</p>
-          </div>
-        </div>
-      </section>
+                    </div>
+                </div>
+            </section>
             <section
                 className='portfolio-section'
                 id='portfolio'
@@ -218,62 +218,62 @@ export default function MainContent() {
                             target='_blank'
                             rel='noreferrer'
                         >
-              <img
+                            <img
                                 src='https://static1.squarespace.com/static/5f215ab150bec52030447111/t/60cccd0be0529c4c668475fa/1624034571565/ms_logo-vertical-white%401x.png'
                                 alt='motosumo team-display application website'
-              />
+                            />
                             <div className='portfolio-item__cover'>
-                <div>
+                                <div>
                                     <h4 className='portfolio-item__title'>
                                         Motosumo
                                     </h4>
                                     <h5 className='portfolio-item__subtitle'>
                                         Team Display App
                                     </h5>
-                </div>
+                                </div>
                                 <span className='portfolio-item__deco-line' />
-              </div>
-            </a>
-          </div>
+                            </div>
+                        </a>
+                    </div>
                     <div className='portfolio-item--webshop'>
-            <a
+                        <a
                             href='https://webshop-example.panpan.dk/home'
                             className='portfolio-item__link'
                             target='_blank'
                             rel='noreferrer'
-            >
+                        >
                             <img
                                 src={require('../assets/webshop.png')}
                                 alt='web shop model'
                                 style={{ height: 'inherit' }}
                             />
                             <div className='portfolio-item__cover'>
-                <div>
+                                <div>
                                     <h4 className='portfolio-item__title'>
                                         Web Shop
                                     </h4>
                                     <h5 className='portfolio-item__subtitle'>
                                         React Practice Project
                                     </h5>
-                </div>
+                                </div>
                                 <span className='portfolio-item__deco-line' />
-              </div>
-            </a>
-          </div>
+                            </div>
+                        </a>
+                    </div>
                     <div className='portfolio-item--nexter'>
-            <a
+                        <a
                             href='https://panpan31415.github.io/advanced-css-course-gird/'
                             className='portfolio-item__link'
                             target='_blank'
                             rel='noreferrer'
-            >
-              <img
+                        >
+                            <img
                                 src='https://panpan31415.github.io/advanced-css-course-gird/img/logo.png'
                                 alt='nexter project'
                                 style={{ width: '80%' }}
-              />
+                            />
                             <div className='portfolio-item__cover'>
-                <div>
+                                <div>
                                     <h4 className='portfolio-item__title'>
                                         Nextor Agent
                                     </h4>
@@ -281,25 +281,25 @@ export default function MainContent() {
                                         A practice project build with CSS grid
                                         box
                                     </h5>
-                </div>
+                                </div>
                                 <span className='portfolio-item__deco-line' />
-              </div>
-            </a>
-          </div>
+                            </div>
+                        </a>
+                    </div>
                     <div className='portfolio-item--hotel'>
-            <a
+                        <a
                             href='https://panpan31415.github.io/advanced-css-course-flex/'
                             className='portfolio-item__link'
                             target='_blank'
                             rel='noreferrer'
-            >
-              <img
+                        >
+                            <img
                                 src='https://codingheroes.io/assets/img/logo-light-small.png'
                                 alt='coding hero'
                                 style={{ width: '80%' }}
-              />
+                            />
                             <div className='portfolio-item__cover'>
-                <div>
+                                <div>
                                     <h4 className='portfolio-item__title'>
                                         HOTEL LAS PALMAS
                                     </h4>
@@ -307,22 +307,22 @@ export default function MainContent() {
                                         A flexbox practice project with Jonas
                                         Schmedtmann
                                     </h5>
-                </div>
+                                </div>
                                 <span className='portfolio-item__deco-line' />
-              </div>
-            </a>
-          </div>
-        </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <a
+                    <a
                         className='portfolio-section__show-more'
                         href='https://github.com/panpan31415?tab=repositories'
                         target='_blank'
                         rel='noreferrer'
-          >
-            More on github
-          </a>
-        </div>
+                    >
+                        More on github
+                    </a>
+                </div>
 
                 <div className='portfolio-section__summary'>
                     <div className='portfolio-summary-item'>
@@ -336,23 +336,23 @@ export default function MainContent() {
                         <div className='portfolio-summary-item__text'>
                             years professional experience
                         </div>
-          </div>
+                    </div>
                     <div className='portfolio-summary-item'>
                         <p className='portfolio-summary-item__number'>5</p>
                         <div className='portfolio-summary-item__text'>
                             certifications earned{' '}
-          </div>
-          </div>
-        </div>
-      </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section
                 className='testimonials-section'
                 id='testimonials'
             >
                 <h2 className='testimonials-section__title'>Testimonials</h2>
                 <div className='testimonials-section__divider' />
-        <TestimonialContainer />
-      </section>
+                <TestimonialContainer />
+            </section>
 
             <section
                 className='contact-section'
@@ -370,28 +370,28 @@ export default function MainContent() {
                         <p className='contact-item__text'>
                             panpan31415@gmail.com
                         </p>
-          </div>
+                    </div>
                     <div className='contact-item'>
                         <p className='contact-item__method'>Phone</p>
                         <p className='contact-item__text'>+45 52686386</p>
-          </div>
-        </div>
-      </section>
+                    </div>
+                </div>
+            </section>
 
             <section className='copyright-section'>
-        <p>
+                <p>
                     The profile image was captured by{' '}
                     <a href='https://www.photosbykawa.com/'>Ms. Kamila Kawa</a>,
                     a talented photographer.
-        </p>
-        <p>
+                </p>
+                <p>
                     This site's design was created by{' '}
                     <a
                         href='https://themeforest.net/user/caliberthemes'
                         target='_blank'
                         rel='noreferrer'
                     >
-            © 2024 CaliberThemes
+                        © 2024 CaliberThemes
                     </a>{' '}
                     and was rebuilt by{' '}
                     <a
@@ -399,12 +399,12 @@ export default function MainContent() {
                         target='_blank'
                         rel='noreferrer'
                     >
-            Panpan
+                        Panpan
                     </a>{' '}
-          with ReactJS under the terms of themeforest regular license.
-          <br /> All rights reserved.
-        </p>
-      </section>
-    </main>
-  );
+                    with ReactJS under the terms of themeforest regular license.
+                    <br /> All rights reserved.
+                </p>
+            </section>
+        </main>
+    );
 }
