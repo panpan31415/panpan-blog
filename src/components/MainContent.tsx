@@ -7,11 +7,15 @@ import { PiCookingPotBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { scrollToElement } from "./SmoothScrollLink";
 import TestimonialContainer from "./Testimonial";
+import { useComponentSize } from "../utilities";
+import { useRef } from "react";
 
 export default function MainContent() {
+  const mainRef = useRef(null)
+  const size = useComponentSize(mainRef)
   return (
-    <main className="main">
-      <div className="content-frame" />
+    <main className="main" ref={mainRef}>
+      <div className="content-frame" style={{width:size.width}} />
       <section className="home-section" id={"home"}>
         <div className="home-section__intro">
           <p className="home-section__hello">Hi, I'm</p>
