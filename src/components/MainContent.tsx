@@ -18,11 +18,11 @@ import { useComponentSize } from '../utilities';
 const imgBaseUrl = 'https://s3.eu-west-1.amazonaws.com/panpan.dk/images/';
 
 export default function MainContent() {
-  const mainRef = useRef(null)
-  const size = useComponentSize(mainRef)
+    const mainRef = useRef(null)
+    const size = useComponentSize(mainRef)
     return (
         <main className='main' ref={mainRef}>
-            <div className='content-frame' style={{width:size.width}} />
+            <div className='content-frame' style={{ width: size.width }} />
             <section
                 className='home-section'
                 id={'home'}
@@ -35,7 +35,7 @@ export default function MainContent() {
                         Zhang
                     </h1>
                     <div className='home-section__divider' />
-                    <p className='home-section__position'>Frontend Developer</p>
+                    <p className='home-section__position'>Frontend Developer & Mobile App Developer</p>
                 </div>
                 <div className='home-section__profile'>
                     <img
