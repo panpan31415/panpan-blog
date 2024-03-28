@@ -37,11 +37,11 @@ export const skills: Skill[] = [
     },
     {
         name: 'React Native',
-        value: 60,
+        value: 95,
     },
     {
         name: 'NextJS',
-        value: 40,
+        value: 50,
     },
     {
         name: 'SQL',
