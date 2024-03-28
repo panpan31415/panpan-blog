@@ -45,6 +45,7 @@ html:focus-within {
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
+    background-color: var(--secondary-color);
 }
 
 /* A elements that don't have a class get default styles */
