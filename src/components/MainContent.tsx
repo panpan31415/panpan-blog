@@ -15,7 +15,7 @@ import TestimonialContainer from './Testimonial';
 import { useRef } from 'react';
 import { useComponentSize } from '../utilities';
 
-const imgBaseUrl="https://s3.eu-west-1.amazonaws.com/panpan.dk/images/"
+const imgBaseUrl = 'https://s3.eu-west-1.amazonaws.com/panpan.dk/images/';
 
 export default function MainContent() {
   const mainRef = useRef(null)
@@ -45,7 +45,7 @@ export default function MainContent() {
                                  ${imgBaseUrl}profile-img_500w.webp 500w,
                                  ${imgBaseUrl}profile-img_400w.webp 400w,
                                  ${imgBaseUrl}profile-img_300w.webp 300w`}
-                        sizes="(min-width: 1200px) 500px,
+                        sizes='(min-width: 1200px) 500px,
                                (min-width: 1024px) 600px,
                                (min-width: 800px) 400px,
                                (min-width: 768px) 700px,
@@ -53,7 +53,7 @@ export default function MainContent() {
                                (min-width: 600px) 500px,
                                (min-width: 500px) 400px,
                                (min-width: 400px) 300px,
-                                300px"
+                                300px'
                         src={`${imgBaseUrl}profile-img_800w.webp`}
                         alt='panpan profile'
                     ></img>
