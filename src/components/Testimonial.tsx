@@ -29,11 +29,7 @@ function TestimonialItem({
                 {testimonial.description}
             </p>
             <div className='testimonial__author'>
-                <img
-                    src={testimonial.picture}
-                    alt='testimonial profile'
-                    className='testimonial__profile-picture'
-                />
+
                 <div>
                     <p className='testimonial__name'>
                         {testimonial.authorName}
@@ -93,8 +89,8 @@ export default function TestimonialContainer() {
                     itemRef={item1Ref}
                     testimonial={
                         testimonials[
-                            (dataIndex + testimonials.length) %
-                                testimonials.length
+                        (dataIndex + testimonials.length) %
+                        testimonials.length
                         ]
                     }
                     key={dataIndex + testimonials.length}
@@ -114,8 +110,8 @@ export default function TestimonialContainer() {
                     itemRef={item2Ref}
                     testimonial={
                         testimonials[
-                            (dataIndex + 1 + testimonials.length) %
-                                testimonials.length
+                        (dataIndex + 1 + testimonials.length) %
+                        testimonials.length
                         ]
                     }
                     key={dataIndex + testimonials.length}
