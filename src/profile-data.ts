@@ -123,7 +123,7 @@ export const experiences: ExperienceItem[] = [
         logoBackgroundColor: '#fff',
         position: 'React Native Developer',
         companyName: 'Nordic Cubee Aps',
-        period: 'Jan 2022 - Current',
+        period: 'Jan 2022 - July 2024',
         descriptions: [
             `Mastered React Native's Animated library and gained proficiency in React Native Reanimated for advanced animation and performance optimization.`,
             `Experienced in developing applications using both React Native (barebone) and Expo, covering a wide spectrum of development scenarios.`,
