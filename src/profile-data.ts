@@ -48,7 +48,7 @@ export const skills: Skill[] = [
     },
     {
         name: 'NextJS',
-        value: 65,
+        value: 85,
     },
     {
         name: 'Tailwind',
