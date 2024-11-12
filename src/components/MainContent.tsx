@@ -1,5 +1,11 @@
 import './MainContent.scss';
-import { educations, experiences, jobPosition, skills } from '../profile-data';
+import {
+    educations,
+    experiences,
+    introduction,
+    jobPosition,
+    skills,
+} from '../profile-data';
 import SkillItem from './SkillItem';
 import HistoryItem from './HistoryItem';
 import {
@@ -90,17 +96,7 @@ export default function MainContent() {
                 <p className='about-section__subtitle'>
                     Passionate & detail focused
                 </p>
-                <p className='about-section__introduction'>
-                    I am a Frontend Developer with three years of hands-on
-                    experience. I bring a strong foundation in React,
-                    JavaScript, and CSS to the table. My passion for crafting
-                    seamless user interfaces drives me to seek a position where
-                    I can challenge myself, innovate, and contribute
-                    significantly to projects that matter. I'm eager to apply my
-                    expertise within a dynamic team, aiming to push the
-                    boundaries of web development and create impactful digital
-                    experiences.
-                </p>
+                <p className='about-section__introduction'>{introduction}</p>
                 <div className='about-section__skill-area'>
                     {skills.map((skill, index) => (
                         <SkillItem

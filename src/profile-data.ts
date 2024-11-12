@@ -1,6 +1,10 @@
 export type JobPosition = string;
 export const jobPosition: JobPosition =
     'Frontend Developer | Microsoft Certified - Azure Developer Associate(AZ-204)';
+
+export type Introduction = string;
+export const introduction: Introduction =
+    'Certified Azure Developer (AZ-204) with a solid foundation in frontend development and a keen interest in expanding my cloud and DevOps skills. While my experience in Azure is focused on certification-level knowledge, I’m eager to build real-world expertise in cloud development, CI/CD, and infrastructure automation.';
 export type Skill = {
     name: string;
     value: number;
