@@ -246,6 +246,14 @@
 .hobby-item {
     background-color: var(--highlight-color);
     color: var(--section-background-color);
+    transition: all ease-in-out 0.3s;
+    &:hover,
+    &:active,
+    &:visited {
+        background-color: var(--section-background-color);
+        color: var(--highlight-color);
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -396,6 +404,13 @@
 .portfolio-summary-item {
     background-color: var(--highlight-color);
     color: var(--section-background-color);
+    &:hover,
+    &:active,
+    &:visited {
+        background-color: var(--section-background-color);
+        color: var(--highlight-color);
+    }
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
