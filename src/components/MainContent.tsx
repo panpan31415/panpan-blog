@@ -75,7 +75,7 @@ export default function MainContent() {
                 <a
                     className='home-section__links--left'
                     download={true}
-                    href='https://s3.eu-west-1.amazonaws.com/panpan.dk/files/CV.pdf'
+                    href='https://s3.eu-west-1.amazonaws.com/panpan.dk/files/Panpan_Zhang_CV.pdf'
                 >
                     DOWNLOAD RESUME
                 </a>
