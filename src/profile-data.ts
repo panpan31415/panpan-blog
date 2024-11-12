@@ -7,6 +7,10 @@ export type Skill = {
 };
 export const skills: Skill[] = [
     {
+        name: 'Azure Development Certified AZ-204',
+        value: 75,
+    },
+    {
         name: 'React',
         value: 95,
     },
