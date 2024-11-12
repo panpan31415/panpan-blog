@@ -1,3 +1,6 @@
+export type JobPosition = string;
+export const jobPosition: JobPosition =
+    'Frontend Developer | Microsoft Certified - Azure Developer Associate(AZ-204)';
 export type Skill = {
     name: string;
     value: number;
