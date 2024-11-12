@@ -435,6 +435,7 @@
     }
     &__subtitle {
         @extend %subtitle;
+        text-transform: initial;
     }
     &__items {
         margin-top: 4rem;

@@ -360,11 +360,12 @@ export default function MainContent() {
                 className='contact-section'
                 id='contact'
             >
-                <h2 className='contact-section__title'>Contact</h2>
+                <h2 className='contact-section__title'>Get in Touch</h2>
                 <div className='contact-section__divider' />
                 <p className='contact-section__subtitle'>
                     {' '}
-                    Do you need a frontend developer? I am available now.
+                    I’m currently open to new opportunities. Feel free to reach
+                    out, and let’s start a conversation!
                 </p>
                 <div className='contact-section__items'>
                     <div className='contact-item'>
