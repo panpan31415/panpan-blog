@@ -4,6 +4,7 @@ import NavigationArea from './NavigationArea';
 import MainContent from './MainContent';
 import NavigationContext from './NavigationContext';
 import { useState } from 'react';
+import AnimatedCursor from 'react-animated-cursor';
 
 function App() {
     const [activeRoute, setActiveRoute] = useState('about');
@@ -21,6 +22,10 @@ function App() {
                         <MainContent />
                     </NavigationContext.Provider>
                 </div>
+                <AnimatedCursor
+                    outerSize={16}
+                    color='231, 29, 54'
+                />
             </div>
         </Fragment>
     );
