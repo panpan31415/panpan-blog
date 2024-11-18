@@ -14,6 +14,7 @@ import {
     BsSteam,
     BsYinYang,
 } from 'react-icons/bs';
+import { SiAzurefunctions, SiMicrosoftazure } from "react-icons/si";
 import { PiCookingPotBold } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 import { scrollToElement } from './SmoothScrollLink';
@@ -354,6 +355,7 @@ export default function MainContent() {
                 <h2 className='testimonials-section__title'>Testimonials</h2>
                 <div className='testimonials-section__divider' />
                 <TestimonialContainer />
+
             </section>
 
             <section
@@ -380,7 +382,19 @@ export default function MainContent() {
                     </div>
                 </div>
             </section>
-
+            <section className='visitor-count-section'>
+                <p className='visitor-count-section__countLabel'>This site has been visited<span className='visitor-count-section__number'>400</span>times in total.</p>
+                <p>
+                A visit is counted based on unique IP addresses, with a minimum interval of 1 minute between consecutive visits from the same IP address. This functionality demonstrates the use of Azure Functions.
+               </p>
+               <p>Your IP address is <span className='visitor-count-section__ip'>85.37.23.12</span></p>
+               <p>You have visited this site <span className='visitor-count-section__ip-visited'>4</span> time(s), welcome!</p>
+               <p style={{
+                margin:"1.5rem auto",
+                fontSize:"3rem"
+               }}> <SiMicrosoftazure color='var(--primary-color)' /> <SiAzurefunctions color='var(--primary-color)'/> </p>
+               
+            </section>
             <section className='copyright-section'>
                 <p>
                     The profile image was captured by{' '}

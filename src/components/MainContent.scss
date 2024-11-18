@@ -513,3 +513,34 @@
         }
     }
 }
+.visitor-count-section {
+    @extend %section;
+    color: var(--text-default-color);
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    &__countLabel{
+        font-size: 2rem;
+        margin:1rem 0;
+        
+        color: var(--primary-color);
+    }
+    &__number {
+        margin: 0 1rem;
+        letter-spacing:0.2rem ;
+        font-family: 'Doto', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-variation-settings: 'ROND' 0;
+        color:var(--highlight-color)
+        
+    }
+    &__ip,&__ip-visited{
+        color: var(--primary-color);
+    }
+}
