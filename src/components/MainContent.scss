@@ -101,6 +101,7 @@
             object-position: bottom;
             width: 100%;
             aspect-ratio: 2/3;
+            filter:sepia(80%) hue-rotate(200deg) saturate(50%) brightness(100%);
         }
         @media screen and (max-width: 600px) {
             margin-top: 3rem;
