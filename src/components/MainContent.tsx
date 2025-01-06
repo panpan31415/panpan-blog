@@ -69,6 +69,7 @@ export default function MainContent() {
                                 300px'
                         src={`${imgBaseUrl}profile-img_800w.webp`}
                         alt='panpan profile'
+                        loading='lazy'
                     ></img>
                 </div>
             </section>
@@ -223,7 +224,7 @@ export default function MainContent() {
                         >
                             <img
                                 src='https://static1.squarespace.com/static/5f215ab150bec52030447111/t/60cccd0be0529c4c668475fa/1624034571565/ms_logo-vertical-white%401x.png'
-                                alt='motosumo team-display application website'
+                                alt='motosumo team-display application website' loading='lazy'
                             />
                             <div className='portfolio-item__cover'>
                                 <div>
@@ -249,6 +250,7 @@ export default function MainContent() {
                                 src={require('../assets/webshop.png')}
                                 alt='web shop model'
                                 style={{ height: 'inherit' }}
+                                loading='lazy'
                             />
                             <div className='portfolio-item__cover'>
                                 <div>
@@ -273,7 +275,8 @@ export default function MainContent() {
                             <img
                                 src='https://panpan31415.github.io/advanced-css-course-gird/img/logo.png'
                                 alt='nexter project'
-                                style={{ width: '80%' }}
+                                style={{ width: '80%' }} 
+                                loading='lazy'
                             />
                             <div className='portfolio-item__cover'>
                                 <div>
@@ -300,6 +303,7 @@ export default function MainContent() {
                                 src='https://codingheroes.io/assets/img/logo-light-small.png'
                                 alt='coding hero'
                                 style={{ width: '80%' }}
+                                loading='lazy'
                             />
                             <div className='portfolio-item__cover'>
                                 <div>
